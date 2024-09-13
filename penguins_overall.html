@@ -9,9 +9,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="Emily" />
 
+<meta name="date" content="2024-09-13" />
 
-<title>Sexual Dimorphism</title>
+<title>Penguins</title>
 
 <script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -342,30 +344,73 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Sexual Dimorphism</h1>
+<h1 class="title toc-ignore">Penguins</h1>
+<h4 class="author">Emily</h4>
+<h4 class="date">2024-09-13</h4>
 
 </div>
 
 
+<div id="data" class="section level2">
+<h2>Data</h2>
+<p>These data are from palmerspenguins dataset. Data were collected and
+made available by Dr. Kristen Gorman and the Palmer Station, Antarctica
+LTER, a member of the Long Term Ecological Research Network.</p>
+<p>This package contains two datasets, with 344 penguins. One is called
+‘penguins’ and is a simplified version of the second dataset, wich is
+called ‘penguins_raw’. ‘penguins_raw’ contains all the original data and
+variables.</p>
+<div class="float">
+<img
+src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1ZoV3lzDs_s6JjPgwsNarSctQAyWaMEI9nw&amp;s"
+alt="Gentoo Penguin" />
+<div class="figcaption">Gentoo Penguin</div>
+</div>
+<hr />
+<p><br></p>
+</div>
+<div id="single-trait-distribution" class="section level2">
+<h2>Single trait distribution</h2>
+<p>I am investigating the differences in body mass of these
+penguins.</p>
+<p>Below is a dotplot showing the range of body mass of all penguins
+surveyed.</p>
+<p><br></p>
+<p><img src="penguins_overall_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<hr />
+<p><br></p>
+<p>Here, I investigated the relationship between species and body mass
+of penguins. I found that Adelie and Chinstrap penguins have similar
+body masses, whereas Gentoo penguins generally are larger.</p>
+<p><img src="penguins_overall_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+</div>
+<div id="relationship-between-multiple-traits" class="section level2">
+<h2>Relationship between multiple traits</h2>
+<p>Now, I want to understand the relationship between body mass and
+flipper length.</p>
+<p><br></p>
+<p>Below, I plotted the relationship between body mass and flipper
+length. It shows that as body mass increases, flipper length also
+increases.</p>
+</div>
+<div id="section" class="section level2">
+<h2><img src="penguins_overall_files/figure-html/unnamed-chunk-4-1.png" width="672" /></h2>
+<p><br></p>
+</div>
+<div id="sexual-dimorphism" class="section level2">
+<h2>Sexual dimorphism</h2>
 <p>Here, I explored how male and female penguins differ in body mass and
 flipper length.</p>
 <p><br></p>
-<div id="sexual-dimorphism-in-body-mass" class="section level2">
-<h2>Sexual Dimorphism in Body Mass</h2>
 <p>From the data plotted below, female penguins from all three species
 tend to be smaller than male penguins from the same species.</p>
-<p><img src="sexual_dimorph_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p><img src="penguins_overall_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 <p><br></p>
-<hr />
-<p><br></p>
-<div id="sexual-dimorphism-in-flipper-length" class="section level3">
-<h3>Sexual Dimorphism in Flipper Length</h3>
 <p>From the data below, female penguins from all three species tend to
 be have smaller flippers than male penguins from the same species. This
 could be inferred also because body mass and flipper length was highly
 correlated in the above scatterplot.</p>
-<p><img src="sexual_dimorph_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
-</div>
+<p><img src="penguins_overall_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
 </div>
 
 
