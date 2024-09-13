@@ -1,0 +1,30 @@
+---
+title: "Relationships between Multiple Traits"
+
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, include=FALSE}
+library(palmerpenguins)
+library(tidyverse)
+```
+
+<br> 
+
+Now, I want to understand the relationship between body mass and flipper length. 
+
+<br>
+
+Below, I plotted the relationship between body mass and flipper length. It shows that as body mass increases, flipper length also increases. 
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+ggplot(penguins, aes(body_mass_g, flipper_length_mm))+
+  geom_smooth(method="lm")+
+  geom_point(aes(color=species))+
+  labs(title="Relationship Between Flipper Length and Body Mass of Penguins", x=" Body Mass", y="Flipper Length")+
+  theme_bw()
+```

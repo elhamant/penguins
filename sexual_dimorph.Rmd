@@ -1,0 +1,45 @@
+---
+title: "Sexual Dimorphism"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, include=FALSE}
+library(palmerpenguins)
+library(tidyverse)
+```
+Here, I explored how male and female penguins differ in body mass and flipper length. 
+
+<br>
+
+## Sexual Dimorphism in Body Mass
+
+From the data plotted below, female penguins from all three species tend to be smaller than male penguins from the same species. 
+
+```{r, echo=FALSE, warning=FALSE}
+ggplot(penguins)+
+  geom_boxplot(aes(species, body_mass_g, fill=sex))+
+  labs(y="Body Mass")+
+  theme_bw()
+```
+
+<br> 
+
+---
+
+<br> 
+
+### Sexual Dimorphism in Flipper Length 
+
+
+From the data below, female penguins from all three species tend to be have smaller flippers than male penguins from the same species. This could be inferred also because body mass and flipper length was highly correlated in the above scatterplot. 
+
+
+```{r, echo=FALSE, warning=FALSE}
+ggplot(penguins)+
+  geom_boxplot(aes(species, flipper_length_mm, fill=sex))+
+  labs(y="Flipper Length")+
+  theme_bw()

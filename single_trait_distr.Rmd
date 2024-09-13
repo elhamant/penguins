@@ -1,0 +1,42 @@
+---
+title: "Single Trait Distribution"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r, include=FALSE}
+library(palmerpenguins)
+library(tidyverse)
+```
+
+## Body Mass {.tabset}
+
+I am investigating the differences in body mass of these penguins. 
+
+Below is a dotplot showing the range of body mass of all penguins surveyed.
+
+<br>
+
+```{r, echo=FALSE, warning=FALSE}
+ggplot(penguins)+
+  geom_dotplot(aes(body_mass_g), dotsize=.5, binwidth = 150)+
+  labs(title="Body Mass of Peguins", x="Body Mass", y="Number")+
+  theme_bw()
+```
+
+---
+
+<br>
+
+## Species and Body Mass 
+
+Here, I investigated the relationship between species and body mass of penguins. I found that Adelie and Chinstrap penguins have similar body masses, whereas Gentoo penguins generally are larger. 
+
+```{r, echo=FALSE, warning=FALSE}
+ggplot(penguins)+
+  geom_boxplot(aes(species, body_mass_g))+
+  labs(title="Body Mass of Penguins", y="Body Mass")+
+  theme_bw()
+```
