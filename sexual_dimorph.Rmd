@@ -32,7 +32,7 @@ ggplot(penguins)+
 
 <br> 
 
-### Sexual Dimorphism in Flipper Length 
+## Sexual Dimorphism in Flipper Length 
 
 
 From the data below, female penguins from all three species tend to be have smaller flippers than male penguins from the same species. This could be inferred also because body mass and flipper length was highly correlated in the above scatterplot. 
