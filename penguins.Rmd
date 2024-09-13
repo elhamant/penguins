@@ -1,0 +1,102 @@
+---
+title: "Penguins"
+author: "Emily"
+date: "2024-09-13"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Data
+
+These data are from palmerspenguins dataset. Data were collected and made available by Dr. Kristen Gorman and the Palmer Station, Antarctica LTER, a member of the Long Term Ecological Research Network.
+
+This package contains two datasets, with 344 penguins. One is called 'penguins' and is a simplified version of the second dataset, wich is called 'penguins_raw'. 'penguins_raw' contains all the original data and variables. 
+
+![Gentoo Penguin](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1ZoV3lzDs_s6JjPgwsNarSctQAyWaMEI9nw&s)
+
+```{r, include=FALSE}
+library(palmerpenguins)
+library(tidyverse)
+```
+
+---
+
+<br>
+
+
+## Single trait distribution
+
+I am investigating the differences in body mass of these penguins. 
+
+Below is a dotplot showing the range of body mass of all penguins surveyed.
+
+<br>
+
+```{r, echo=FALSE, warning=FALSE}
+ggplot(penguins)+
+  geom_dotplot(aes(body_mass_g), dotsize=.5, binwidth = 150)+
+  labs(title="Body Mass of Peguins", x="Body Mass", y="Number")+
+  theme_bw()
+```
+
+---
+
+<br> 
+
+Here, I investigated the relationship between species and body mass of penguins. I found that Adelie and Chinstrap penguins have similar body masses, whereas Gentoo penguins generally are larger. 
+
+```{r, echo=FALSE, warning=FALSE}
+ggplot(penguins)+
+  geom_boxplot(aes(species, body_mass_g))+
+  labs(title="Body Mass of Penguins", y="Body Mass")+
+  theme_bw()
+```
+
+## Relationship between multiple traits
+
+Now, I want to understand the relationship between body mass and flipper length. 
+
+<br>
+
+Below, I plotted the relationship between body mass and flipper length. It shows that as body mass increases, flipper length also increases. 
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+ggplot(penguins, aes(body_mass_g, flipper_length_mm))+
+  geom_smooth(method="lm")+
+  geom_point(aes(color=species))+
+  labs(title="Relationship Between Flipper Length and Body Mass of Penguins", x=" Body Mass", y="Flipper Length")+
+  theme_bw()
+```
+---
+
+<br>
+
+
+## Sexual dimorphism
+
+Here, I explored how male and female penguins differ in body mass and flipper length. 
+
+<br>
+
+From the data plotted below, female penguins from all three species tend to be smaller than male penguins from the same species. 
+
+```{r, echo=FALSE, warning=FALSE}
+ggplot(penguins)+
+  geom_boxplot(aes(species, body_mass_g, fill=sex))+
+  labs(y="Body Mass")+
+  theme_bw()
+```
+
+<br> 
+
+From the data below, female penguins from all three species tend to be have smaller flippers than male penguins from the same species. This could be inferred also because body mass and flipper length was highly correlated in the above scatterplot. 
+
+
+```{r, echo=FALSE, warning=FALSE}
+ggplot(penguins)+
+  geom_boxplot(aes(species, flipper_length_mm, fill=sex))+
+  labs(y="Flipper Length")+
+  theme_bw()
