@@ -1,0 +1,17 @@
+output_dir: "."
+navbar:
+  left:
+    - text: "Overall"
+      href: index.html
+    - text: "Single Trait Distribution"
+      href: single_trait_dist.html
+    - text: "Relationships Between Multiple Traits"
+      href: multi_trait_relation.html
+    - text: "Sexual Dimorphism"
+      href: sexual_dimorph.html
+output:
+  html_document:
+    theme: darkly
+    highlight: textmate
+    toc: true 
+    toc_float: true 
